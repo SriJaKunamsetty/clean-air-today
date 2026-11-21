@@ -1,5 +1,7 @@
 # Clean Air Today: Urban Air Quality Assistant
 
+🚀 **Live Deployment:** [https://clean-air-today.vercel.app/](https://clean-air-today.vercel.app/)
+
 **Vertical:** Challenge 6, Urban Air Quality Assistant. Persona: a family or community in a smoggy city in winter.
 
 ## Approach and logic
