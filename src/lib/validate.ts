@@ -20,7 +20,8 @@ export interface Profile {
 export type Result<T> = { ok: true; value: T } | { ok: false; errors: string[] };
 
 const CITY = /^[\p{L}\p{M}][\p{L}\p{M}\s.,'-]{1,79}$/u;
-const oneOf = <T extends string>(list: readonly T[], v: unknown): v is T => typeof v === "string" && (list as readonly string[]).includes(v);
+const oneOf = <T extends string>(list: readonly T[], v: unknown): v is T =>
+  typeof v === "string" && (list as readonly string[]).includes(v);
 
 /** Validates untrusted JSON; never trusts types, never echoes raw input in errors. */
 export function parseProfile(input: unknown): Result<Profile> {

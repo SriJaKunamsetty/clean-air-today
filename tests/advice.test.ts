@@ -2,7 +2,14 @@ import { describe, expect, it } from "vitest";
 import { buildAdvice } from "@/lib/advice";
 import type { Profile } from "@/lib/validate";
 
-const base: Profile = { city: "Delhi", groups: [], commute: "car", cooking: "induction-electric", heating: "none", hasPurifier: false };
+const base: Profile = {
+  city: "Delhi",
+  groups: [],
+  commute: "car",
+  cooking: "induction-electric",
+  heating: "none",
+  hasPurifier: false,
+};
 const ids = (aqi: number, p: Partial<Profile> = {}) => buildAdvice(aqi, { ...base, ...p }).actions.map((a) => a.id);
 
 describe("buildAdvice", () => {
